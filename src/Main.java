@@ -1,3 +1,5 @@
+import javax.swing.*;
+import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -28,12 +30,12 @@ public class Main {
         String result = "";
         //Process the Tests
         for (int i = 0; i < separatedTests.length; i++) {
-            int[] testX = new int[separatedTests[i].length-3];
+            int[] testX = new int[separatedTests[i].length - 3];
             int xSize = separatedTests[i][0];
             int ySize = separatedTests[i][1];
             int numberOfPoints = separatedTests[i][2];
             for (int j = 3; j < separatedTests[i].length; j++) {
-                testX[j-3] = separatedTests[i][j];
+                testX[j - 3] = separatedTests[i][j];
             }
             result += handleOneTest(xSize, ySize, numberOfPoints, testX);
         }
