@@ -42,12 +42,15 @@ public class GameMap {
     }
 
     public void printMap() {
+        System.out.println("--------------------------------------");
         for (int i = 0; i < map.length; i++) {
             String row = "";
             for (int j = 0; j < map[0].length; j++) {
-                row += "|" + map[i][j] + "|";
+                row +=map[i][j] + "\t";
             }
             System.out.println(row);
         }
+        System.out.println("--------------------------------------");
+
     }
 }
